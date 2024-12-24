@@ -1,11 +1,18 @@
 body {
     background-color: black;
     color: white;
-    font-family: "Host Grotesk", sans-serif;
+    font-family: "Host Grotesk", sans-serif 20px;
 }
 
+a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+}
 .nav-bar{
     padding: 10px 20px; /* 10px top bottom 20px left and right */
+    color: black;
+    background-color: gray;
 }
 
 .nav-list {
@@ -16,14 +23,10 @@ body {
     padding: 0;
 }
 
-a {
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-}
-
 a:hover {
     text-decoration: underline;
+    background-color: lightgray;
+    border-radius: 45px;
 }
 
 img {
@@ -36,7 +39,14 @@ img {
 section {
     padding: 15px;
 }
+section > h2 {
+    text-align: center;
+}
 
 .experience > ul > li {
     list-style: square;
+}
+
+.connect > a {
+ color: white;
 }
