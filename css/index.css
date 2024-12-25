@@ -13,6 +13,9 @@ a {
     padding: 10px 20px; /* 10px top bottom 20px left and right */
     color: black;
     background-color: gray;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
 }
 
 .nav-list {
@@ -47,6 +50,7 @@ section > h2 {
     list-style: square;
 }
 
-.connect > a {
- color: white;
+.Connect > ul , .Experience > ul , .Projects > ul{
+    display: flex;
+    justify-content: space-evenly;
 }
