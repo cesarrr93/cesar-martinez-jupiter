@@ -1,0 +1,52 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: "Host Grotesk", sans-serif 20px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+}
+.nav-bar{
+    padding: 10px 20px; /* 10px top bottom 20px left and right */
+    color: black;
+    background-color: gray;
+}
+
+.nav-list {
+    display: flex; /*how to start flexbox container*/
+    justify-content: space-between; /* Space nav items evenly */
+    list-style: none; /* takes away bullet points */
+    margin: 0;
+    padding: 0;
+}
+
+a:hover {
+    text-decoration: underline;
+    background-color: lightgray;
+    border-radius: 45px;
+}
+
+img {
+    width: 70px;
+    height: 90px;
+    margin-right: 20px;
+    border-radius: 45px;
+}
+
+section {
+    padding: 15px;
+}
+section > h2 {
+    text-align: center;
+}
+
+.experience > ul > li {
+    list-style: square;
+}
+
+.connect > a {
+ color: white;
+}
