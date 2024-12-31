@@ -7,10 +7,13 @@ body {
 h1 {
     font-size: 40px;
     font-style: italic;
-    border-bottom: 2px solid gray;
     width: 160px;
     margin: 10px auto;
     text-align: center;
+}
+
+h1:hover {
+    border-bottom: 2px solid gray;
 }
 
 a {
