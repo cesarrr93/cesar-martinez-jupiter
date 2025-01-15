@@ -1,76 +1,191 @@
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap');
+
+/* Root Variables */
+:root {
+    --background-color: #121212; 
+    --primary-color: #00b4d8;
+    --secondary-color: #90e0ef;
+    --accent-color: #ff477e;
+    --text-primary: #e9ecef;
+    --border-color: #343a40;
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Roboto', sans-serif;
+}
+
+/* */
+/* General Styles */
 body {
-    background-color: black;
-    color: white;
-    font-family: "Host Grotesk", sans-serif 20px;
+    background-color: var(--background-color);
+    color: var(--text-primary);
+    font-family: var(--font-primary);
+    margin: 0;
+    margin-left: 10px;
+    padding: 0;
 }
 
-h1 {
-    font-size: 40px;
-    font-style: italic;
-    border-bottom: 2px solid gray;
-    width: 160px;
-    margin: 10px auto;
-    text-align: center;
-}
-
-a {
-    text-decoration: none;
-    font-size: 20px;
-    color: white;
-}
-.nav-bar{
-    padding: 10px 20px; /* 10px top bottom 20px left and right */
-    color: black;
-    background-color: gray;
+/* Nav Bar Styling */
+nav {
+    background-color: var(--background-color);
+    border-bottom:1px solid var(--border-color);
+    padding: 1 rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: sticky;
     top: 0;
-    overflow: hidden;
+    z-index: 1000; /* ensures that it always stays over all the items from the website*/
 }
 
-.nav-list {
-    display: flex; /*how to start flexbox container*/
-    justify-content: space-between; /* Space nav items evenly */
-    list-style: none; /* takes away bullet points */
+nav .logo {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
     margin: 0;
     padding: 0;
 }
 
-a:hover {
-    text-decoration: underline;
-    background-color: lightgray;
-    border-radius: 45px;
-}
-.Info {
-    display: flex;
-    justify-content: center;
-}
-
-img {
-    width: 80px;
-    height: 90px;
-    margin: 10px auto;
-    border-radius: 45px;
+nav ul li {
+    color: var(--text-primary);
+    font-family: var(--font-secondary);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s; /* smooths out the change of background color and the text color*/
 }
 
-section {
-    padding: 15px;
+nav ul li a:hover {
+    background-color: var(--primary-color);
+    color: #121212;
 }
 
-.About > p {
-    max-width: 1000px;
+/* General heading styles */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-primary);
+    color: var(--primary-color);
+    margin: 0 0 1rem 0;
+}
+
+h1 {
+    font-size: 40px;
     margin: 0 auto;
-    text-align: center;
 }
 
-section > h2 {
-    text-align: center;
+/* Ancor Styles */
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
 }
 
-.experience > ul > li {
-    list-style: square;
+a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
 }
 
-.Connect > ul , .Experience > ul , .Projects > ul{
+/* Image Styles */
+img {
+    width: 100px;
+    height: 150px;
+    margin: 10px auto;
+    border-radius: 35px;
+}
+
+/* List and Ancor styles */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    margin: 0.5rem 0;
+}
+
+ul li a {
+    color: var(--secondary-color);
+    font-family: var(--font-secondary);
+    font-size: 2rem;
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    display: inline-block;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+ul li a :hover {
+    background-color: var(--primary-color);
+    color: #121212;
+}
+
+
+/* About Section */
+.About > .about-section {
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    justify-content:space-between;
 }
+
+.image-section {
+    margin-left: 1rem;
+}
+
+.bio {
+    /* justify-content: flex-end; */
+    margin: 0 auto 0 1.5rem;
+    max-width: 1200px;
+}
+
+
+/* Desktop */
+@media (max-width: 1920px) {
+    .logo {
+        font-size: 2.5rem;
+
+    }
+}
+
+/* Tablet Size */
+@media (max-width: 1024px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+}
+
+/* Phone size */
+@media (max-width: 768px) {
+
+    /* Make this into column instead of row */
+    nav ul {
+        gap: 0.5rem;
+    }
+
+    nav ul li a {
+        display: block;
+        text-align: center;
+    }
+
+    .logo {
+        display: none !important;
+
+    }
+
+    .bio {
+        margin: 0 auto;
+    }
+
+    ul li a {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 1rem;
+    }
+}
+
+
+
