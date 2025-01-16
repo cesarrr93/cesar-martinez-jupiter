@@ -126,7 +126,7 @@ ul li a :hover {
 
 
 /* About Section */
-.About > .about-section {
+.about > .about-section {
     display: flex;
     flex-wrap: wrap;
     justify-content:space-between;
@@ -138,24 +138,25 @@ ul li a :hover {
 
 .bio {
     /* justify-content: flex-end; */
+    display: flex;
     margin: 0 auto 0 1.5rem;
-    max-width: 1200px;
-}
-
-
-/* Desktop */
-@media (max-width: 1920px) {
-    .logo {
-        font-size: 2.5rem;
-
-    }
+    max-width: 60%;
 }
 
 /* Tablet Size */
 @media (max-width: 1024px) {
     .logo {
-        font-size: 1.5rem;
+        font-size: 1.5 rem;
+        text-shadow: white 2px;
+        
     }
+
+    h2 {
+        display: flex;
+        justify-content: center;
+        font-size: 3.5 rem;
+    }
+
 }
 
 /* Phone size */
@@ -172,7 +173,7 @@ ul li a :hover {
     }
 
     .logo {
-        display: none !important;
+        display: none;
 
     }
 
