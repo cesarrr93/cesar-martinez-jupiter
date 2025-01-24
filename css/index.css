@@ -143,6 +143,8 @@ ul li a :hover {
     max-width: 60%;
 }
 
+
+/* Desktop to mobile */
 /* Tablet Size */
 @media (max-width: 1024px) {
     .logo {
