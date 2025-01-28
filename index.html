@@ -91,6 +91,35 @@
                  <li><a href="https://www.linkedin.com/in/cesar-martinez-b6a6871b5/">Linkedln</a></li>
              </ul>
         </section>
+
+        <!-- Message -->
+         <section id="message">
+            <div class="section-header">
+                <h2>Leave a Message</h2>
+            </div>
+            <form name="leave-message" class="message-form">
+                <label for="userName">Name: </label>
+                <input type="text" id="userName" name="userName" required>
+                <br>
+                <label for="userEmail">Email: </label>
+                <input type="email" id="userEmail" name="userEmail" required>
+                <br>
+                <label for="userMesage">Message: </label>
+                <textarea name="userMessage" id="userMessage" required></textarea>
+                <br>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+         </section>
+
+         <!-- Message Display -->
+          <section id="message-section">
+            <div class="section-header">
+                <h2>Messages</h2>
+            </div>
+                <ul id="message-list">
+
+                </ul>
+          </section>
         <script src="js/index.js"></script>
     </body>
 </html>

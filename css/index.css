@@ -143,6 +143,112 @@ ul li a :hover {
     max-width: 60%;
 }
 
+/* Style for form */
+#message {
+    max-width: 600px;
+    margin: 2rem 0;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: rgba(18,18,18, 0.8) /* Slightly transparent background*/;
+}
+
+.message-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.message-form label {
+    font-family: var(--font-secondary);
+    color: var(--text-primary);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.message-form input,
+.message-form textarea {
+    width: 95%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    color: black;
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.message-form input:focus,
+.message-form textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 5px var(--primary-color);
+}
+
+.message-form textarea {
+    resize: vertical; /*Allows vertical resizing*/
+    min-height: 150px;
+}
+
+.submit-btn {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer; /*Changes cursor when its on th btn*/
+    transition: background-color 0.3s, transfrom 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px); /*add upward effect*/
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Display Message */
+
+#message-section {
+    display: none;
+    margin-top: 2rem;
+    padding: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.message-item {
+    background-color: rgba(18, 18, 18, 0.8);
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 1rem; /* Space between messages */
+}
+
+.message-item p {
+    margin: 0;
+    color: var(--text-primary);
+}
+
+.message-item button {
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.message-item button:hover {
+    background-color: var(--secondary-color);
+}
+
 
 /* Desktop to mobile */
 /* Tablet Size */
@@ -188,7 +294,17 @@ ul li a :hover {
         flex-wrap: wrap;
         font-size: 1rem;
     }
+    
+    #message {
+        margin: 2rem auto;
+    }
+
+    .section-header h2 {
+        text-align: center;
+    }
 }
+
+
 
 
 
