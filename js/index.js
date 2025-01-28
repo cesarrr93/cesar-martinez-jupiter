@@ -15,8 +15,21 @@ const thisYear = today.getFullYear();
 // Adding Copyright and year to footer
 const copyright = document.createElement("p");
 // adding text to p tag
-copyright.textContent =`© Cesar Martinez ${thisYear}`;
+copyright.textContent = `© Cesar Martinez ${thisYear}`;
 
 // adding copyright to footer
 footer.appendChild(copyright);
 
+// Skill section
+
+// Array of skills
+const skills = ["HTML", "Java Script", "CSS"];
+const skillSection = document.getElementById("skills");
+const skillList = skillSection.querySelector("ul");
+
+// Loop to populate skill section
+for (i = 0; i < skills.length; i++) {
+  const skill = document.createElement("li");
+  skill.textContent = skills[i];
+  skillList.appendChild(skill);
+}
