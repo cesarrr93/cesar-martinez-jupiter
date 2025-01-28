@@ -143,7 +143,7 @@ ul li a :hover {
     max-width: 60%;
 }
 
-/* Style for for and message area */
+/* Style for form */
 #message {
     max-width: 600px;
     margin: 2rem 0;
@@ -171,7 +171,7 @@ ul li a :hover {
     width: 95%;
     padding: 0.75rem;
     border: 1px solid var(--border-color);
-    color: var(--text-primary);
+    color: black;
     font-family: var(--font-secondary);
     font-size: 1rem;
     transition: border-color 0.3s, box-shadow 0.3s;
@@ -210,6 +210,46 @@ ul li a :hover {
 .submit-btn:active {
     transform: translateY(0);
 }
+
+/* Display Message */
+
+#message-section {
+    display: none;
+    margin-top: 2rem;
+    padding: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.message-item {
+    background-color: rgba(18, 18, 18, 0.8);
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 1rem; /* Space between messages */
+}
+
+.message-item p {
+    margin: 0;
+    color: var(--text-primary);
+}
+
+.message-item button {
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.message-item button:hover {
+    background-color: var(--secondary-color);
+}
+
+
 /* Desktop to mobile */
 /* Tablet Size */
 @media (max-width: 1024px) {
